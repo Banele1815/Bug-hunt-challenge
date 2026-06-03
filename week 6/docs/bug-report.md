@@ -5,7 +5,7 @@
 - **Location:** addBtn event listener
 - **Issue:** Task is added when mouse hovers over button instead of clicking
 - **Cause:** Wrong event used (`mouseover` instead of `click`)
-- **Fix (planned):** Replace `mouseover` with `click`
+- **Fix:** Replaced `mouseover` with `click`
 
 ---
 
@@ -14,7 +14,7 @@
 - **Location:** toggleTask() function
 - **Issue:** Task completion state does not update properly
 - **Cause:** Variable shadowing / incorrect map logic
-- **Fix (planned):** Correct parameter naming and comparison logic
+- **Fix:** Corrected parameter naming and comparison logic
 
 ---
 
@@ -23,7 +23,7 @@
 - **Location:** getFilteredTasks()
 - **Issue:** Active filter shows completed tasks
 - **Cause:** Wrong condition (`completed === true` instead of `false`)
-- **Fix (planned):** Change filter logic to show incomplete tasks
+- **Fix:** Changed filter logic to show incomplete tasks
 
 ---
 
@@ -32,7 +32,7 @@
 - **Location:** delete button event listener
 - **Issue:** Clicking delete does nothing or deletes wrong item
 - **Cause:** Using `event.target.id` (not set)
-- **Fix (planned):** Use `task.id` directly
+- **Fix:** Used `task.id` directly
 
 ---
 
