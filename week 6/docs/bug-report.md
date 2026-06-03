@@ -41,4 +41,4 @@
 - **Location:** getFilteredTasks()
 - **Issue:** Filter logic is inconsistent between active/completed
 - **Cause:** Duplicate or incorrect filtering conditions
-- **Fix (planned):** Ensure correct separation of active vs completed logic
+- **Fix:** Corrected filter conditions to properly separate active (completed === false) and completed (completed === true) tasks
