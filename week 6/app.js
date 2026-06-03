@@ -8,8 +8,7 @@ const taskList = document.getElementById("task-list");
 const statsEl = document.getElementById("stats");
 const filterBtns = document.querySelectorAll(".filters button");
 
-
-addBtn.addEventListener('click', function () {
+addBtn.addEventListener("click", function () {
   const text = taskInput.value.trim();
   if (text === "") return;
   addTask(text);
@@ -54,10 +53,12 @@ function deleteTask(id) {
   renderTasks();
 }
 
-//fixed the bug 
+//fixed the bug
 function getFilteredTasks() {
-  if (currentFilter === 'active') {
-    return tasks.filter(function (task) { return task.completed === false; });
+  if (currentFilter === "active") {
+    return tasks.filter(function (task) {
+      return task.completed === false;
+    });
   }
   if (currentFilter === "completed") {
     return tasks.filter(function (task) {
@@ -98,7 +99,7 @@ function renderTasks() {
     deleteBtn.className = "delete-btn";
     deleteBtn.textContent = "×";
     deleteBtn.addEventListener("click", function (event) {
-      deleteTask(event.target.id);
+      deleteTask(task.id); // Fixed: was event.target.id (undefined), use task.id instead
     });
 
     li.appendChild(checkbox);
