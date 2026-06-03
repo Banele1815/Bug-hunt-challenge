@@ -57,10 +57,10 @@ function deleteTask(id) {
   renderTasks();
 }
 
-
+//fixed the bug 
 function getFilteredTasks() {
   if (currentFilter === 'active') {
-    return tasks.filter(function (task) { return task.completed === true; });
+    return tasks.filter(function (task) { return task.completed === false; });
   }
   if (currentFilter === 'completed') {
     return tasks.filter(function (task) { return task.completed === true; });
